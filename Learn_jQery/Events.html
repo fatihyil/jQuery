@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <button>Test</button>
+    <p>Fatih yılmaz blog</p>
+</body>
+</html>
+<script>
+    $("button").click(function () {
+        alert("Fatih yılmaz")
+    })
+    $("p").mouseenter(function () {
+        alert("Fatih YILMAZ")
+    })
+    $("p").on({
+        mouseenter: function () {
+            $(this).css("background-color","red")
+        },
+        mouseleave: function () {
+            $(this).css("background-color","yellow")
+        }
+
+    })
+
+</script>
