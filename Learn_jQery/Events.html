@@ -5,19 +5,26 @@
     <script src="scripts/jquery-3.4.1.min.js"></script>
     <meta charset="utf-8" />
     <title></title>
+    <style>
+        *{
+            outline:none;
+        }
+    </style>
 </head>
 <body>
     <button>Test</button>
     <p>Fatih yılmaz blog</p>
+    <span>Eren Bükü</span>
+    <input type="type" name="name" value="" />
 </body>
 </html>
 <script>
-    $("button").click(function () {
-        alert("Fatih yılmaz")
-    })
-    $("p").mouseenter(function () {
-        alert("Fatih YILMAZ")
-    })
+    //$("button").click(function () {
+    //    alert("Fatih yılmaz")
+    //})
+    //$("p").mouseenter(function () {
+    //    alert("Fatih YILMAZ")
+    //})
     $("p").on({
         mouseenter: function () {
             $(this).css("background-color","red")
@@ -25,7 +32,34 @@
         mouseleave: function () {
             $(this).css("background-color","yellow")
         }
+    })
+    $("p").dblclick(function () {
+        $(this).hide();
+    })
+    $("span").hover(function () {
+        $(this).css("background-color", "red");
+    },
+        function () {
+            $(this).css("background-color", "blue");
+        }
+    )
+    $("input").focus(function () {
+        $(this).css("background-color", "yellow");
+    });
+    $("input").blur(function () {
+        $(this).css("background-color", "black");
+    });
 
+    $("input").on({
+        mouseenter: function () {
+            $(this).css("background-color", "purple");
+        },
+        mouseleave: function () {
+            $(this).css("background-color", "blue");
+        },
+        click: function () {
+            $(this).css("background-color", "red");
+        }
     })
 
 </script>

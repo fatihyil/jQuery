@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hidden-Show-Toggle</title>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <button>Test</button>
+    <p id="demo">Fatih yılmaz</p>
+
+</body>
+</html>
+<script>
+    $("button").click(function () {
+        document.getElementById("demo").innerHTML = Date();
+    })
+    $("p").on({
+        mouseenter: function () {
+            $(this).css("background-color","red")
+        },
+        mouseleave: function () {
+            $(this).css("background-color","yellow")
+        }
+    })
+
+</script>
