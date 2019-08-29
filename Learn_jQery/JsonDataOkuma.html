@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+    <button>JSon data oku</button>
+    <ul>
+    </ul>
+</body>
+</html>
+<script>
+    $("button").click(function () {
+        $.getJSON("https://services.odata.org/V3/OData/OData.svc/Products?$format=json", function (data) {
+            $("li").remove();
+            $.each(data.value, function (key, item) {
+                $("ul").append("<li>" + item.Name + "</li>");
+            })
+        })
+    })
+
+</script>

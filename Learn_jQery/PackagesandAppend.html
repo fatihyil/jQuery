@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <button id="gstr">Ekranda diziyi göster</button>
+    <ul></ul>
+</body>
+</html>
+<script>
+    var sehirler = ["İzmir", "İstanbul", "Ankara", "Edirne", "Çanakkale"];
+    $("#gstr").click(function () {
+        $("li").remove();
+        $.each(sehirler, function (key, value) {
+            $("ul").append("<li>" + value + "</li>");
+        })
+    })
+
+</script>

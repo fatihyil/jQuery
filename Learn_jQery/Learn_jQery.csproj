@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="Events.html" />
     <Content Include="Hidden-Show-Toggle.html" />
+    <Content Include="JsonDataOkuma.html" />
+    <Content Include="PackagesandAppend.html" />
     <Content Include="scripts\jquery-3.4.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
